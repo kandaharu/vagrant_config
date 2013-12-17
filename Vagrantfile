@@ -19,6 +19,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # 仮想マシンのホスト名
   config.vm.hostname = "vm-centos"
 
+  # boxにシェフが入ってなかったら自動で入れてくれる
+  # 事前にプラグインを入れる必要あり
+  # $ vagrant plugin install vagrant-omnibus
+  # See.  https://github.com/schisamo/vagrant-omnibus
+  config.omnibus.chef_version = :latest
+
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
