@@ -27,12 +27,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 end
 ```
 
-## Vagrantプラグイン
-### vagrant-omnibusプラグイン
+### Vagrantプラグイン
+Vagrantをさらに便利に使うためのプラグインを紹介します。
+
+#### vagrant-omnibus
 [Github::vagrant-omnibus](https://github.com/schisamo/vagrant-omnibus)
 
 boxにシェフが入っていない場合に自動で入れてくれるプラグインです。
-コマンドライン上で `vagrant plugin install vagrant-omnibus` のコマンドを入力してインストールします。
+コマンドライン上で `vagrant plugin install vagrant-omnibus` を入力してインストールします。
 
 Vagrantfileに以下の設定を追加してください。
 
@@ -46,9 +48,15 @@ end
 
 その後、`vagrant up` をするとChefの最新版がboxにインストールされます。
 
-## chefのインストール
-ホストOSからchefを利用するため、knife-soloをインストールします。
+#### sahara
+[Github::sahara](https://github.com/jedi4ever/sahara)
 
-`gem install knife-solo`
+OSの途中の状態を記憶しておいて、なにかあったらコマンドひとつでロールバックできるプラグイン。
+コマンドライン上で `vagrant plugin install sahara` を入力してインストールします。
 
-chefやknifeの解説は省略します。
+
+# chefのインストール
+ホストOSからchefを利用するため、knife-soloを導入します。
+knife-soloはGemとして公開されており、 `gem install knife-solo` でインストールできます。
+
+
