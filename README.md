@@ -34,7 +34,7 @@ Vagrantをさらに便利に使うためのプラグインを紹介します。
 [Github::vagrant-omnibus](https://github.com/schisamo/vagrant-omnibus)
 
 boxにシェフが入っていない場合に自動で入れてくれるプラグインです。
-コマンドライン上で `vagrant plugin install vagrant-omnibus` を入力してインストールします。
+コマンドライン上で `vagrant plugin install vagrant-omnibus` と入力してインストールします。
 
 Vagrantfileに以下の設定を追加してください。
 
@@ -51,12 +51,5 @@ end
 #### sahara
 [Github::sahara](https://github.com/jedi4ever/sahara)
 
-OSの途中の状態を記憶しておいて、なにかあったらコマンドひとつでロールバックできるプラグイン。
-コマンドライン上で `vagrant plugin install sahara` を入力してインストールします。
-
-
-# chefのインストール
-ホストOSからchefを利用するため、knife-soloを導入します。
-knife-soloはGemとして公開されており、 `gem install knife-solo` でインストールできます。
-
-
+OSの途中の状態を記憶しておき、以前の状態に戻したいときはコマンドひとつでロールバックできるプラグイン。
+コマンドライン上で `vagrant plugin install sahara` と入力してインストールします。

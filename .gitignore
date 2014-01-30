@@ -1,4 +1,5 @@
 /.kitchen/
 /.kitchen.local.yml
 /**/.DS_Store
-/.vagrant/machines
+/.vagrant/**/*
+/.chef/**/*
